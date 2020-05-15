@@ -7,7 +7,6 @@
 
 ``` bash
 vscode configure c locale
-# install dependencies
 npm install
 
 1.Install c / c ++ extension in vscode
