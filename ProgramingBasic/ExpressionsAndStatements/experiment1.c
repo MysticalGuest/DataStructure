@@ -55,7 +55,7 @@ void main(){
 
 void main(){
 	int a, b, c;
-  float area, s;
+	float area, s;
 
 	printf("请输入三角形的三条边长:\n");
 	printf("a=");
