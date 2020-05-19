@@ -14,7 +14,7 @@ void main() {
 	// 请输入一个十进制整数,程序会将其转化为二进制数
 	printf("Please enter a decimal integer, the program will convert it into a binary number: ");
 	scanf("%d", &a);
-    fun(a);
+  fun(a);
 	printf("\n");
 
   system("pause");
