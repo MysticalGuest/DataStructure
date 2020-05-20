@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 #define StackSize 50
-//定义运算符栈
+//瀹氫箟杩愮畻绗︽爤
 typedef struct
 {
 	char elem[StackSize];
@@ -12,7 +12,7 @@ typedef struct
 void InitCStack(CSeqStack *S){
 	S->top=-1;
 }
-//定义运算数栈
+//瀹氫箟杩愮畻鏁版爤
 typedef struct
 {
 	int num[StackSize];
