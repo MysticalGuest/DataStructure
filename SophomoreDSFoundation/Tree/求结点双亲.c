@@ -1,4 +1,4 @@
-// ¶þ²æÊ÷±éÀúÓ¦ÓÃ
+// äºŒå‰æ ‘éåŽ†åº”ç”¨
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -21,28 +21,28 @@ void CreateBiTree(BiTree *bt){
 	}
 }
 
-//¶þ²æÊ÷»ù±¾²Ù×÷£ºÇóË«Ç×½áµã
+//äºŒå‰æ ‘åŸºæœ¬æ“ä½œï¼šæ±‚åŒäº²ç»“ç‚¹
 BiTNode* Parent(BiTree bt,char x){
 	BiTree p;
 	if(bt==NULL||bt->date==x)
-		return NULL;//¿ÕÊ÷»òÕß¸ù½ÚµãÎªx£¬·µ»ØNULL
+		return NULL;//ç©ºæ ‘æˆ–è€…æ ¹èŠ‚ç‚¹ä¸ºxï¼Œè¿”å›žNULL
 
 	if(bt->LChild!=NULL)
 		if(bt->LChild->date==x)
 			return bt;
 	if(bt->RChild!=NULL)
 		if(bt->RChild->date==x)
-			return bt;//ÕÒµ½xµÄ½áµãºÍÆäË«Ç×
+			return bt;//æ‰¾åˆ°xçš„ç»“ç‚¹å’Œå…¶åŒäº²
 
-	p=Parent(bt->LChild,x);//ÔÚ×ó×ÓÊ÷ÉÏÕÒ
+	p=Parent(bt->LChild,x);//åœ¨å·¦å­æ ‘ä¸Šæ‰¾
 	if(p!=NULL)
-		return p;//ÔÚ×ó×ÓÊ÷ÉÏÕÒµ½£¬·µ»Ø
+		return p;//åœ¨å·¦å­æ ‘ä¸Šæ‰¾åˆ°ï¼Œè¿”å›ž
 
-	p=Parent(bt->RChild,x);//ÔÚ×ó×ÓÊ÷ÉÏÃ»ÕÒµ½£¬ÔÚÓÖ×ÓÊ÷ÉÏÕÒ
+	p=Parent(bt->RChild,x);//åœ¨å·¦å­æ ‘ä¸Šæ²¡æ‰¾åˆ°ï¼Œåœ¨åˆå­æ ‘ä¸Šæ‰¾
 	if(p!=NULL)
-		return p;//ÔÚÓÒ×ÓÊ÷ÉÏÕÒµ½£¬·µ»Ø
+		return p;//åœ¨å³å­æ ‘ä¸Šæ‰¾åˆ°ï¼Œè¿”å›ž
 
-	return NULL;//ÔÚ×óÓÒ×ÓÊ÷ÉÏ¶¼Ã»ÕÒµ½£¬·µ»Ø¿Õ
+	return NULL;//åœ¨å·¦å³å­æ ‘ä¸Šéƒ½æ²¡æ‰¾åˆ°ï¼Œè¿”å›žç©º
 }
 
 void ScanfBiTree(BiTree *bt){
