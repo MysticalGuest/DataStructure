@@ -1,43 +1,43 @@
-/*°üº¬ÎÄ¼ş*/
+/*åŒ…å«æ–‡ä»¶*/
 #include "stdio.h"
 
-/*ºê¶¨Òå*/
+/*å®å®šä¹‰*/
 #define MAXSIZE 100
 #define OK 1
 #define ERROR 0
 
-typedef int ElemType;  /*Ë³Ğò±íÖĞ´æ·ÅÕûĞÍÔªËØ*/
+typedef int ElemType;  /*é¡ºåºè¡¨ä¸­å­˜æ”¾æ•´å‹å…ƒç´ */
 typedef struct{
   ElemType elem[MAXSIZE];
   int last;
 }SeqList;
 
-/*º¯ÊıÉùÃ÷*/
+/*å‡½æ•°å£°æ˜*/
 void initList(SeqList *L);
 void printList(SeqList L);
 void inputData(SeqList *L);
 void merge(SeqList *LA,SeqList *LB,SeqList *LC);
 
-/*Ö÷º¯Êı*/
+/*ä¸»å‡½æ•°*/
 void main()
 {
 	SeqList La,Lb,Lc;
 
-	/* ³õÊ¼»¯Èı¸öË³Ğò±í*/
+	/* åˆå§‹åŒ–ä¸‰ä¸ªé¡ºåºè¡¨*/
 	initList(&La);
 	initList(&Lb);
 	initList(&Lc);
 
-	/*¸øË³Ğò±íLaºÍLb¸³³õÖµ*/
-	printf("Çë¸øË³Ğò±íLaÊäÈëÔªËØ(°´·Çµİ¼õË³Ğò),ÊäÈë-100±íÊ¾½áÊø\n");
+	/*ç»™é¡ºåºè¡¨Laå’ŒLbèµ‹åˆå€¼*/
+	printf("è¯·ç»™é¡ºåºè¡¨Laè¾“å…¥å…ƒç´ (æŒ‰éé€’å‡é¡ºåº),è¾“å…¥-100è¡¨ç¤ºç»“æŸ\n");
 	inputData(&La);
 
-	printf("Çë¸øË³Ğò±íLbÊäÈëÔªËØ(°´·Çµİ¼õË³Ğò),ÊäÈë-100±íÊ¾½áÊø\n");
+	printf("è¯·ç»™é¡ºåºè¡¨Lbè¾“å…¥å…ƒç´ (æŒ‰éé€’å‡é¡ºåº),è¾“å…¥-100è¡¨ç¤ºç»“æŸ\n");
 	inputData(&Lb);
 
 	merge(&La,&Lb,&Lc);  
 
-	/*Êä³öÈı¸öË³Ğò±í*/
+	/*è¾“å‡ºä¸‰ä¸ªé¡ºåºè¡¨*/
 	printf("\nLa=");	printList(La);
 
 	printf("\nLb=");	printList(Lb);
@@ -48,7 +48,7 @@ void main()
 }
 
 
-/*º¯Êı¶¨Òå*/
+/*å‡½æ•°å®šä¹‰*/
 void initList(SeqList *L)
 {
 	L->last=-1;
@@ -96,13 +96,13 @@ void merge(SeqList *LA,  SeqList *LB,  SeqList *LC)
 			j++; 
 			k++;
         }
-	while(i<=LA->last)	/*µ±±íLAÓĞÊ£ÓàÔªËØÊ±£¬Ôò½«±íLAÓàÏÂµÄÔªËØ¸³¸ø±íLC*/
+	while(i<=LA->last)	/*å½“è¡¨LAæœ‰å‰©ä½™å…ƒç´ æ—¶ï¼Œåˆ™å°†è¡¨LAä½™ä¸‹çš„å…ƒç´ èµ‹ç»™è¡¨LC*/
 	{
 		LC->elem[k]= LA->elem[i];
 		i++; 
 		k++;
 	}
-	while(j<=LB->last)  /*µ±±íLBÓĞÊ£ÓàÔªËØÊ±£¬Ôò½«±íLBÓàÏÂµÄÔªËØ¸³¸ø±íLC*/	
+	while(j<=LB->last)  /*å½“è¡¨LBæœ‰å‰©ä½™å…ƒç´ æ—¶ï¼Œåˆ™å°†è¡¨LBä½™ä¸‹çš„å…ƒç´ èµ‹ç»™è¡¨LC*/	
 	{
 		LC->elem[k]= LB->elem[j];
 		j++; 
