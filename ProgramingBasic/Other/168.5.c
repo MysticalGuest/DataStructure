@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<Windows.h>
+
 void main()
 {
 	int i,j,a[5],max,temp;
@@ -15,4 +17,6 @@ void main()
     for(i=0;i<5;i++)
 		printf("%5d",a[i]);
 	printf("\n");
+
+	system("pause");
 }
