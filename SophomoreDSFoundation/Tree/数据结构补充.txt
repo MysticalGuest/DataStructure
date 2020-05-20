@@ -1,0 +1,159 @@
+void InsNode(BiTNode *p,BiTNode *r)
+{
+	if(p->Rtag==1)   /*p无右孩子*/
+	{
+		r->RChild=p->RChild;   /*p的后继变为r的后继*/
+		r->Rtag=1;
+		p->RChild=r;   /*r成为p的右孩子*/
+		p->Rtag=0;
+		r->LChild=p;   /*p变为r的前驱*/
+		r->Ltag=1;
+	}
+	else   /*p有右孩子*/
+	{
+		s=p->RChild;
+		while(s->Ltag==0)
+			s=s->LChild;   /*查找p结点的右子树的"最左下端"结点*/
+		r->RChild=p->RChild;   /*p的右孩子变为r的右孩子*/
+		r->Rtag=0;
+		r->LChild=p;  /*p变为r的前驱*/
+		r->Ltag=1;
+		p->RChild=r;   /*r变为p的右孩子*/
+		s->LChild=r;   /*r变为p原来右子树的"最左下端"结点的前驱*/
+	}
+}
+
+
+#define True 1
+#define False 0
+int visited[MAX_VERTEX_NUM]={False};   /*访问标志数组*/
+int IsPath(Graph g,int vi,int vj)
+{
+	if(vi==vj)
+		return 1;
+
+	visited[vi]=True;
+
+	w=FirstAdjVertex(g,vi);
+	while(w!=-1)
+	{
+		if(!visited[w])
+			if(IsPath(g,w,vj)==1)
+				return 1;
+
+			w=NextAdjVertex(g,vi,w);
+	}
+	return 0;
+}
+
+
+int pre[MAX_VERTEX_NUM]={-1};   /*访问标志数组*/
+int Path(Graph,int u,int v)
+{
+	w=FirstAdjVertex(g,u);
+	while(w!=-1)
+	{
+		if(pre[w]==-1)
+		{
+			if(w==v)
+			{
+				PrintPath();
+				return 1;
+			}
+			else
+			{
+				pre[w]=u;
+				if(Path(g,w,v))
+					return 1;
+			}
+		}
+		w=NextAdjVertex(g,u,w);
+	}
+	return 0;
+}
+
+
+void InsertBST(BSTree *bst,KeyType key)
+{
+	p=bst;
+	fp=NULL;
+	s=(BSTree)malloc(sizeof(BSTNode));   /*申请新的结点*/
+	s->key=key;
+	s->LChild=NULL;
+	s->RChild=NULL;
+	if(p=NULL)
+	{
+		*bst=s;
+		return;
+	}
+	while(p!=NULL)
+	{
+		fp=p;
+		if(key < p->key)
+			p=p->LChild;
+		else
+			p=p->RChild;
+	}
+	if(key < fp->key)
+		fp->LChild=s;
+	else
+		fp->RChild=s;
+}
+
+
+void InsertBST(BSTree *bst,KeyType key)
+{
+	p=bst;
+	s=(BSTree)malloc(sizeof(BSTNode));   /*申请新的结点*/
+	s->key=key;
+	s->LChild=NULL;
+	s->RChild=NULL;
+	if(p=NULL)
+	{
+		*bst=s;
+		return;
+	}
+	while(p!=NULL)
+	{
+		if(key < p->key)
+			if(p->LChild)
+				p=p->LChild;
+			else
+			{
+				p->LChild=s;
+				break;
+			}
+		else
+			if(p->RChild)
+				p=p->RChild;
+			else
+			{	
+				p->LChild=s;
+				break;
+			}
+	}
+}
+
+
+void SearchHt(HashTable ht)
+{
+	int count=1;
+	/*输入记录r,关键字为key*/
+	while(key!=ENDKEY&&count<m)
+	{
+		h0=hash(key);
+		if(ht[h0].key==NULLKEY)
+			ht[h0]=r;
+		else
+			for(di=1;di<m;di++)
+			{
+				hi=(h0+di)%m;
+				if(ht[hi].key==NULLKEY)
+				{
+					ht[hi]]r;
+					break;
+				}
+			}
+		/*输入下一个记录r,关键字为key*/
+	}
+}
