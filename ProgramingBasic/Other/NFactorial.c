@@ -3,11 +3,11 @@
 
 float factorial(long int n);
 
-void main()
-{    long int n;
-     printf("请输入一个整数，程序将为你计算其阶乘!\n");
-     printf("n=");
-     scanf("%d",&n);
+void main(){
+	long int n;
+	// 请输入一个整数，程序将为你计算其阶乘!
+	printf("Please enter an integer and the program will calculate its factorial for you! \nn=");
+	scanf("%d",&n);
 	 //if(n<0)                                        //两种方法，两种函数，此处取第一个函数
 	        //printf("Date Error!\n");
 	 //else
