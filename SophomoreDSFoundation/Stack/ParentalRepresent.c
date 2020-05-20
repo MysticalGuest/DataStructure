@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//˫�ױ�ʾ��
+//双亲表示法
 #define MAX 100
 
 typedef struct TNode{
