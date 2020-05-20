@@ -1,0 +1,75 @@
+<<Pride and Prejudice>>#<<Pride and Prejudice>>
+Jane Austen#Jane Austen
+24.5
+<<Jane Eyre>>#<<Jane Eyre>>
+Charlotte Bronte#Charlotte Bronte
+34.2
+<<Jane Eyre>>#<<Jane Eyre>>
+Charlotte Bronte#Charlotte Bronte
+34.5
+<<Jane Eyre>>#<<Jane Eyre>>
+Charlotte Bronte#Charlotte Bronte
+27.0
+<<The Catcher in the Rye>>#<<The Catcher in the Rye>>
+J.D.Salinger#J.D.Salinger
+30.0
+<<A Midsummer Night's Dream>>#<<A Midsummer Night's Dream>>
+W. William Shakespeare#W. William Shakespeare
+28.5
+<<The Old Man and the Sea>>#<<The Old Man and the Sea>>
+Ernest Miller Hemingway#Ernest Miller Hemingway
+33.5
+<<GULLIVER¡¯S TRAVELS>>#<<GULLIVER¡¯S TRAVELS>>
+Jonathan Swift#Jonathan Swift
+38.0
+<<Pickwick Papers>>#<<Pickwick Papers>>
+Charles Dickens#Charles Dickens
+39.0
+<<Father Goriot>>#<<Father Goriot>>
+Honor¨¦ de Balzac#Honor¨¦ de Balzac
+40.0
+<<Father Goriot>>#<<Father Goriot>>
+Honor¨¦ de Balzac#Honor¨¦ de Balzac
+30.0
+<<Father Goriot>>#<<Father Goriot>>
+Honor¨¦ de Balzac#Honor¨¦ de Balzac
+37.0
+<<Eug¨¦nie Grandet>>#<<Eug¨¦nie Grandet>>
+Honor¨¦ de Balzac#Honor¨¦ de Balzac
+23.5
+<<Count of Monte Cristo>>#<<Count of Monte Cristo>>
+Alexandre Dumas#Alexandre Dumas
+22
+<<Les Mis¨¦rables>>#<<Les Mis¨¦rables>>
+Victor Hugo#Victor Hugo
+28
+<<Les Mis¨¦rables>>#<<Les Mis¨¦rables>>
+Victor Hugo#Victor Hugo
+21
+<<Les Mis¨¦rables>>#<<Les Mis¨¦rables>>
+Victor Hugo#Victor Hugo
+30
+<<Resurrection>>#<<Resurrection>>
+Leo Tolstoy#Leo Tolstoy
+37.5
+<<Anna Karenina>>#<<Anna Karenina>>
+Leo Tolstoy#Leo Tolstoy
+34
+<<Anna Karenina>>#<<Anna Karenina>>
+Leo Tolstoy#Leo Tolstoy
+33
+<<Don Quixote>>#<<Don Quixote>>
+Miguel de Cervantes Saavedra#Miguel de Cervantes Saavedra
+40
+<<Divine Comedy>>#<<Divine Comedy>>
+Dante Alighieri#Dante Alighieri
+36.5
+<<Wuthering Heights>>#<<Wuthering Heights>>
+Emily Bronte#Emily Bronte
+23.7
+<<Wuthering Heights>>#<<Wuthering Heights>>
+Emily Bronte#Emily Bronte
+23.2
+#
+#
+-1
