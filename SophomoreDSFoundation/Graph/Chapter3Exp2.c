@@ -4,7 +4,7 @@
 #define Carport 5
 
 typedef struct{
-	long plate[Carport];           //ÓÃÀ´´æ³µÅÆºÅ
+	long plate[Carport];           //ç”¨æ¥å­˜è½¦ç‰Œå·
 	int top;
 }SeqStack;
 
