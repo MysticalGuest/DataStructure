@@ -1,32 +1,32 @@
 void InsNode(BiTNode *p,BiTNode *r)
 {
-	if(p->Rtag==1)   /*pÎÞÓÒº¢×Ó*/
+	if(p->Rtag==1)   /*pæ— å³å­©å­*/
 	{
-		r->RChild=p->RChild;   /*pµÄºó¼Ì±äÎªrµÄºó¼Ì*/
+		r->RChild=p->RChild;   /*pçš„åŽç»§å˜ä¸ºrçš„åŽç»§*/
 		r->Rtag=1;
-		p->RChild=r;   /*r³ÉÎªpµÄÓÒº¢×Ó*/
+		p->RChild=r;   /*ræˆä¸ºpçš„å³å­©å­*/
 		p->Rtag=0;
-		r->LChild=p;   /*p±äÎªrµÄÇ°Çý*/
+		r->LChild=p;   /*på˜ä¸ºrçš„å‰é©±*/
 		r->Ltag=1;
 	}
-	else   /*pÓÐÓÒº¢×Ó*/
+	else   /*pæœ‰å³å­©å­*/
 	{
 		s=p->RChild;
 		while(s->Ltag==0)
-			s=s->LChild;   /*²éÕÒp½áµãµÄÓÒ×ÓÊ÷µÄ"×î×óÏÂ¶Ë"½áµã*/
-		r->RChild=p->RChild;   /*pµÄÓÒº¢×Ó±äÎªrµÄÓÒº¢×Ó*/
+			s=s->LChild;   /*æŸ¥æ‰¾pç»“ç‚¹çš„å³å­æ ‘çš„"æœ€å·¦ä¸‹ç«¯"ç»“ç‚¹*/
+		r->RChild=p->RChild;   /*pçš„å³å­©å­å˜ä¸ºrçš„å³å­©å­*/
 		r->Rtag=0;
-		r->LChild=p;  /*p±äÎªrµÄÇ°Çý*/
+		r->LChild=p;  /*på˜ä¸ºrçš„å‰é©±*/
 		r->Ltag=1;
-		p->RChild=r;   /*r±äÎªpµÄÓÒº¢×Ó*/
-		s->LChild=r;   /*r±äÎªpÔ­À´ÓÒ×ÓÊ÷µÄ"×î×óÏÂ¶Ë"½áµãµÄÇ°Çý*/
+		p->RChild=r;   /*rå˜ä¸ºpçš„å³å­©å­*/
+		s->LChild=r;   /*rå˜ä¸ºpåŽŸæ¥å³å­æ ‘çš„"æœ€å·¦ä¸‹ç«¯"ç»“ç‚¹çš„å‰é©±*/
 	}
 }
 
 
 #define True 1
 #define False 0
-int visited[MAX_VERTEX_NUM]={False};   /*·ÃÎÊ±êÖ¾Êý×é*/
+int visited[MAX_VERTEX_NUM]={False};   /*è®¿é—®æ ‡å¿—æ•°ç»„*/
 int IsPath(Graph g,int vi,int vj)
 {
 	if(vi==vj)
@@ -47,7 +47,7 @@ int IsPath(Graph g,int vi,int vj)
 }
 
 
-int pre[MAX_VERTEX_NUM]={-1};   /*·ÃÎÊ±êÖ¾Êý×é*/
+int pre[MAX_VERTEX_NUM]={-1};   /*è®¿é—®æ ‡å¿—æ•°ç»„*/
 int Path(Graph,int u,int v)
 {
 	w=FirstAdjVertex(g,u);
@@ -77,7 +77,7 @@ void InsertBST(BSTree *bst,KeyType key)
 {
 	p=bst;
 	fp=NULL;
-	s=(BSTree)malloc(sizeof(BSTNode));   /*ÉêÇëÐÂµÄ½áµã*/
+	s=(BSTree)malloc(sizeof(BSTNode));   /*ç”³è¯·æ–°çš„ç»“ç‚¹*/
 	s->key=key;
 	s->LChild=NULL;
 	s->RChild=NULL;
@@ -104,7 +104,7 @@ void InsertBST(BSTree *bst,KeyType key)
 void InsertBST(BSTree *bst,KeyType key)
 {
 	p=bst;
-	s=(BSTree)malloc(sizeof(BSTNode));   /*ÉêÇëÐÂµÄ½áµã*/
+	s=(BSTree)malloc(sizeof(BSTNode));   /*ç”³è¯·æ–°çš„ç»“ç‚¹*/
 	s->key=key;
 	s->LChild=NULL;
 	s->RChild=NULL;
@@ -138,7 +138,7 @@ void InsertBST(BSTree *bst,KeyType key)
 void SearchHt(HashTable ht)
 {
 	int count=1;
-	/*ÊäÈë¼ÇÂ¼r,¹Ø¼ü×ÖÎªkey*/
+	/*è¾“å…¥è®°å½•r,å…³é”®å­—ä¸ºkey*/
 	while(key!=ENDKEY&&count<m)
 	{
 		h0=hash(key);
@@ -154,6 +154,6 @@ void SearchHt(HashTable ht)
 					break;
 				}
 			}
-		/*ÊäÈëÏÂÒ»¸ö¼ÇÂ¼r,¹Ø¼ü×ÖÎªkey*/
+		/*è¾“å…¥ä¸‹ä¸€ä¸ªè®°å½•r,å…³é”®å­—ä¸ºkey*/
 	}
 }
