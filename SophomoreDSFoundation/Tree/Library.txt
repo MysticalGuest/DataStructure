@@ -19,34 +19,34 @@ W. William Shakespeare#W. William Shakespeare
 <<The Old Man and the Sea>>#<<The Old Man and the Sea>>
 Ernest Miller Hemingway#Ernest Miller Hemingway
 33.5
-<<GULLIVER°ØS TRAVELS>>#<<GULLIVER°ØS TRAVELS>>
+<<GULLIVER‚ÄôS TRAVELS>>#<<GULLIVER‚ÄôS TRAVELS>>
 Jonathan Swift#Jonathan Swift
 38.0
 <<Pickwick Papers>>#<<Pickwick Papers>>
 Charles Dickens#Charles Dickens
 39.0
 <<Father Goriot>>#<<Father Goriot>>
-Honor®¶ de Balzac#Honor®¶ de Balzac
+Honor√© de Balzac#Honor√© de Balzac
 40.0
 <<Father Goriot>>#<<Father Goriot>>
-Honor®¶ de Balzac#Honor®¶ de Balzac
+Honor√© de Balzac#Honor√© de Balzac
 30.0
 <<Father Goriot>>#<<Father Goriot>>
-Honor®¶ de Balzac#Honor®¶ de Balzac
+Honor√© de Balzac#Honor√© de Balzac
 37.0
-<<Eug®¶nie Grandet>>#<<Eug®¶nie Grandet>>
-Honor®¶ de Balzac#Honor®¶ de Balzac
+<<Eug√©nie Grandet>>#<<Eug√©nie Grandet>>
+Honor√© de Balzac#Honor√© de Balzac
 23.5
 <<Count of Monte Cristo>>#<<Count of Monte Cristo>>
 Alexandre Dumas#Alexandre Dumas
 22
-<<Les Mis®¶rables>>#<<Les Mis®¶rables>>
+<<Les Mis√©rables>>#<<Les Mis√©rables>>
 Victor Hugo#Victor Hugo
 28
-<<Les Mis®¶rables>>#<<Les Mis®¶rables>>
+<<Les Mis√©rables>>#<<Les Mis√©rables>>
 Victor Hugo#Victor Hugo
 21
-<<Les Mis®¶rables>>#<<Les Mis®¶rables>>
+<<Les Mis√©rables>>#<<Les Mis√©rables>>
 Victor Hugo#Victor Hugo
 30
 <<Resurrection>>#<<Resurrection>>
