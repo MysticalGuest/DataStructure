@@ -7,7 +7,7 @@ struct student{
 
 int advancescanf(){
 	int i=0;
-	printf("Please input every students' Student Number and score of four subjects\n(Maximum 50 students,End by inputing -100)¡£\n");
+	printf("Please input every students' Student Number and score of four subjects\n(Maximum 50 students,End by inputing -100)ã€‚\n");
 	while(1){
 		scanf("%ld",&stu[i].num);
 		if(i>50||stu[i].num==-100)
@@ -60,7 +60,7 @@ void main(){
 		stu[seq[i]].score[0],stu[seq[i]].score[1],stu[seq[i]].score[2],stu[seq[i]].score[3],ascore[i]/4,
 		ascore[i],i+1);
 
-	printf("Please input the number of subjects(1,2,3,4)£¬procedure will ouput information of students whose score of this subject is above 90 and total score is in the top 3.(End by inputing -100)\n");
+	printf("Please input the number of subjects(1,2,3,4)ï¼Œprocedure will ouput information of students whose score of this subject is above 90 and total score is in the top 3.(End by inputing -100)\n");
 	scanf("%d",&num);
 	while(1){
 		if(num>4||num<1)
