@@ -1,4 +1,4 @@
-// �ǵݼ�˳����ϲ�
+// 非递减顺序表合并
 #include<stdio.h>
 #include<stdlib.h>
 #define MAXSIZE 10
@@ -25,7 +25,7 @@ void inputlist(list *L){
 		L->elem[i]=e;
 		i++;
 		if(i>=10){
-			printf("˳���������\n");
+			printf("顺序表已满！\n");
 			break;
 		}
 		scanf("%d",&e);
@@ -42,7 +42,7 @@ void merge(list *L1,list *L2){
 		else if(L2->elem[L2->last]<=L1->elem[0])
 			for(i=0;i<=L1->last;i++){
 				L2->elem[L2->last+i+1]=L1->elem[i];
-				printf("�����ǵݼ�˳����ϲ���ķǵݼ�˳���Ϊ��\n");
+				printf("两个非递减顺序表合并后的非递减顺序表为：\n");
 				for(i=0;i<=len;i++)
 					printf("%d\t",L2->elem[i]);
 			}
@@ -67,7 +67,7 @@ void merge(list *L1,list *L2){
 				L1->elem[tail]=L2->elem[n];
 		}
 		L1->last += L2->last;
-		printf("�����ǵݼ�˳����ϲ���ķǵݼ�˳���Ϊ��\n");
+		printf("两个非递减顺序表合并后的非递减顺序表为：\n");
 		for(i=0;i<=len;i++)
 			printf("%d\t",L1->elem[i]);
 	}
@@ -102,7 +102,7 @@ void merge(list *L1,list *L2){
 					LC.elem[i]=L2->elem[j];
 					i++;
 				}
-			printf("�����ǵݼ�˳����ϲ���ķǵݼ�˳���Ϊ��\n");
+			printf("两个非递减顺序表合并后的非递减顺序表为：\n");
 			for(i=0;i<=len;i++)
 				printf("%d\t",LC.elem[i]);
 		}
@@ -111,9 +111,9 @@ void main(){
 	list LA,LB;
 	initlist(&LA);
 	initlist(&LB);
-	printf("�������10��Ԫ��(����-100��������)������˳���LA:\n");
+	printf("输入最多10个元素(输入-100结束输入)，建立顺序表LA:\n");
 	inputlist(&LA);
-	printf("�������10��Ԫ��(����-100��������)������˳���LB:\n");
+	printf("输入最多10个元素(输入-100结束输入)，建立顺序表LB:\n");
 	inputlist(&LB);
 	merge(&LA,&LB);
 }
