@@ -4,6 +4,7 @@
 void main()
 {
 	int a[10],i,j,k,temp;
+	printf("Please enter 10 integers: \n");
 	for(i=0;i<10;i++)
 		scanf("%d",&a[i]);
 	for(i=0;i<10;i++)
@@ -19,6 +20,7 @@ void main()
 				a[i]=temp;
 			}
 		}
+		printf("After sorting: ");
 	for(i=0;i<10;i++)
 		printf("%5d",a[i]);
 	printf("\n");
