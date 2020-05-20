@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+{
+	int a[10]={4,2,6,1,5,8,3,9,10,7},b[10]={4,2,6,1,5,8,3,9,10,7},c[10],d[10],i,j,m,n,k,l,e,p=9;
+	for(i=0;i<10;i++)
+	{
+		for(j=0;j<10-i;j++)
+		{
+			if(p>10-i)
+				p=p+i-10;
+			if((j+1)==p)
+			{
+				l=a[j];
+			    k=p;
+				e=10-p-i;
+			    for(m=0;m<j;m++)
+				{
+					c[e]=a[m];
+					e++;
+				}
+				for(n=0;n<10-p-i;n++)
+					c[n]=a[k++];
+			}
+			if((j+1)==p)
+				break;
+		}
+		for(j=0;j<10-i;j++)
+			a[j]=c[j];
+        p=l;
+		//for(j=0;j<10-i;j++)
+			//a[j]=d[j];
+	}
+    for(i=0;i<10;i++)
+		if(a[0]==b[i])
+		{
+			printf("%d\n",i+1);
+			printf("%d\n",b[i]);
+		}
+}
