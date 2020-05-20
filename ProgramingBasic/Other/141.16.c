@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<Windows.h>
+
 void main()
 {int i,j,a=4,m=3,n=5;
 	for(i=1;i<=4;i++)
@@ -20,6 +22,8 @@ void main()
 				printf(" ");
 		}printf("\n");
 		j=1;m++;n--;}
+	
+	system("pause");
 }
 
 		
