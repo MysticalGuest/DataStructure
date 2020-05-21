@@ -1,8 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 #include<Windows.h>
 
 /*宏定义*/
-#define MAXSIZE 30
+#define MAXSIZE 50
 
 typedef int ElemType;  /*顺序表中存放整型元素*/
 typedef struct{
@@ -10,46 +10,73 @@ typedef struct{
   int last;
 }SeqList;
 
-/*函数声明*/
-void initList(SeqList *L);
-void printList(SeqList L);
-void deleteList(SeqList *LA, SeqList *LB, int n);
+void reverse(SeqList *L,int i, int j);
 
+void printlist(SeqList L){
+  printf("(");
+  for(int i=0; i<L.last; i++){
+    printf("%d ", L.elem[i]);
+  }
+  printf(")\n");
+}
+ 
 void main(){
+  SeqList L = {{1,2,3,4,5,6,7,8,9,10},10};
 
-  SeqList La, Lb;
-  Lb.last=-1;   // 初始化Lb
+  int n;
+  int temp;
+  char direction;
 
-  int value;
+  printf("Give a sequence table: \n");
+  printlist(L);
 
-	/* 初始化三个顺序表*/
-	initList(&La);
-  // 给出一个顺序表La
-  printf("Give a sequence table: \nLa = ");
-  printList(La);
+  printf("Please enter a positive integer n to cycle through the sequence: ");
+  scanf("%d", &n);
+  getchar();    // 吃掉回车
+  printf("Please select the direction of movement (L for left, R for right): ");
+  while(direction!='R' && direction!='L'){
+    scanf("%c", &direction);
+    getchar();
+    if(direction=='L'){
+      n = n%L.last;
+    }
+    else if(direction=='R'){    // 右移n格就是左移L.last-n格
+      n = L.last - n%L.last;
+    }
+    else{
+      printf("Wrong input, please re-enter: ");
+    }
+  }
+  
+  int i = 0, j = n-1;
 
-  printf("Enter the value you want to delete: ");
-  scanf("%d", &value);
+  //将子表(X0,X1...,Xp-1)逆序为(Xp-1,...,X1,X0)
+  reverse(&L, i, j);
+
+  //将子表(Xp,Xp+1,...,Xn-1)逆序为(Xn-1,...,Xp+1,Xp)
+  i = n;
+  j = L.last-1;
+  reverse(&L, i, j);
+
+  //将整张表(Xp-1,...,X1,X0,Xn-1,...,Xp+1,Xp)逆序为(Xp,Xp+1,...,Xn-1,X0,X1...,Xp-1)
+  i = 0;
+  j = L.last-1;
+  reverse(&L, i, j);
+
+  printf("The sequence table after moving is: \n");
+  printlist(L);
 
   system("pause");
 }
 
-/*函数定义*/
-void initList(SeqList *L){
-	L->last=-1;
-  int i=0;
-  for(i; i<MAXSIZE; i++){
-    L->elem[i]=rand()%100 - 50;
+void reverse(SeqList *L,int i, int j){
+  int temp;
+  while(i < j){
+    temp = L->elem[i];
+    L->elem[i] = L->elem[j];
+    L->elem[j] = temp;
+
+    ++i;
+    --j;
   }
-  L->last=MAXSIZE-1;
-}
-
-void printList(SeqList L){
-   int i;
-
-   printf("(");
-   for(i=0; i<=L.last; i++)
-     printf("%d ", L.elem[i]);
-
-   printf(")\n");
 }
