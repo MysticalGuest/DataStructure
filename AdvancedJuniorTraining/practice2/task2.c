@@ -28,7 +28,6 @@ void main(){
 
   int select;
 
-	/* 初始化三个顺序表*/
 	initList(&La);
   // 给出一个顺序表La
   printf("Give a sequence table: \nLa = ");
