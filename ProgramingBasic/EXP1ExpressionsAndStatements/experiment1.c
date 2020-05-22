@@ -5,16 +5,14 @@
 void main(){
 	float s, a, b, c;
 	printf("Please input three lengths of the triangle:\n");
-
+	
 	scanf("%f%f%f",&a,&b,&c);
-
 	if( a+b > c && a+c > b && b+c>a ){
 		s=(a+b+c) / 2;
 		printf("The area of this triangle is %.2f\n", sqrt(s * (s-a) * (s-b) * (s-c)) );	
 	}
 	else
 		printf("ERROR!\n");
-
 	system("pause");
 }
 
