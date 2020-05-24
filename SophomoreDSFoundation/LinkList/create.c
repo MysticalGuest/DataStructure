@@ -18,6 +18,7 @@ void CreateFromTail(LinkList L) {
 	s = (Node*)malloc(sizeof(Node));
 	scanf("%c", &s->date);
 }
+
 void main() {
 	Node *l;
 	InitLinkList(&l);
