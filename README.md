@@ -19,4 +19,4 @@ gcc -v
 ```
 
 [Mingw-w64 Download](https://sourceforge.net/projects/mingw-w64/files/)
-[Visual Studio Code](https://code.visualstudio.com/Download)
+[Visual Studio Code](https://code.visualstudio.com/Download)  
