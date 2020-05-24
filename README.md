@@ -18,5 +18,5 @@ gcc -v
 3.After the project (.c file) is written, click the F5 button to configure the launch.json and task.json files
 ```
 
-[Mingw-w64 Download](https://sourceforge.net/projects/mingw-w64/files/)
+[Mingw-w64 Download](https://sourceforge.net/projects/mingw-w64/files/)  
 [Visual Studio Code](https://code.visualstudio.com/Download)  
