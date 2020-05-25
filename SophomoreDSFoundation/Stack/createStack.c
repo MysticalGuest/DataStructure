@@ -22,6 +22,7 @@ typedef struct
 void InitNStack(NSeqStack *S){
 	S->top=-1;
 }
+
 void main(){
 	CSeqStack cs;
 	InitCStack(&cs);
