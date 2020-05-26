@@ -186,7 +186,7 @@ void main(){
 	InitCStack(&SuffixExp);
 
   char exp[] = {'5', '+', '2', '*', '(', '1', '+', '6', ')', '-', '8', '/', '2', '\0'};
-
+  printf("Infix expression is: %s\n", exp);
   char suffixstr[50], temp;
   int i = 0, tempNum;
   while (exp[i]!='\0'){
@@ -197,21 +197,21 @@ void main(){
     }
     else{
       printf("char------\n");
-      printf("aaaaa   %c\n", compare(exp[i], getCStackTop(OS)));
+      printf("compare----%c\n", compare(exp[i], getCStackTop(OS)));
       switch(compare(exp[i], getCStackTop(OS))){
         case '>': 
           pushCStack(&OS, exp[i]);
-          printf("case1 > %c\n", exp[i]);
+          printf("case1 >---%c\n", exp[i]);
           i++;
           break;
         case '=': 
           popCStack(&OS, &temp);   // 脱括号
-          printf("case2 = %c\n", temp);
+          printf("case2 =---%c\n", temp);
           i++;
           break;
         case '<':
           while(compare(exp[i], getCStackTop(OS))=='<'){
-            printf("case3 < %c\n", exp[i]);
+            printf("case3 <---%c\n", exp[i]);
             printf("case3 getCStackTop %c\n", getCStackTop(OS));
             popCStack(&OS, &temp);
             printf("case3 after getCStackTop %c\n", getCStackTop(OS));
@@ -232,7 +232,7 @@ void main(){
     popCStack(&SuffixExp, &temp);
     suffixstr[i] = temp;
   }
-  printf("String: %s\n", suffixstr);
+  printf("Infix expression to suffix expression is: %s\n", suffixstr);
   /*
     后缀表达式求值的算法是:
     遍历后缀表达式，
@@ -256,7 +256,7 @@ void main(){
 			// free(temp);
             
 			int result = caculate(leftNum, rightNum, *p);
-      printf("aasas1111: %d\n", result);
+      printf("caculate result----%d\n", result);
 			pushNStack(&NS, result);
 		}
 		p++;
