@@ -8,8 +8,8 @@ typedef struct Node {
 }Node, *LinkList;
 
 void InitLinkList(LinkList *L, char str[]) {
-	*L = (LinkList)malloc(sizeof(Node));
-	(*L)->next = NULL;
+  *L = (LinkList)malloc(sizeof(Node));
+  (*L)->next = NULL;
   Node *r=*L, *s;
   int i=0;
   while(str[i]!='\0'){
@@ -63,8 +63,6 @@ void connectList(LinkList *L1, LinkList *L2){
 		p=p->next;
 	}
 	p->next=(*L2)->next;
-  // printf("len1: %d   len2: %d\n", len1, len2);
-  // printf("len1: %c   len2: %c\n", lastChar(L1), lastChar(L2));
 }
 
 LinkList reverse(LinkList L){
