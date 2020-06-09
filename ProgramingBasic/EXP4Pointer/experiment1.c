@@ -1,14 +1,11 @@
 #include<stdio.h>
 #include<Windows.h>
 
-void swap(float num1, float num2){
-	float *p1, *p2, *temp;
-	p1 = &num1;
-	p2 = &num2;
-	temp = p1;
-	p1 = p2;
-	p2 = temp;
-	printf("%f, %f\n", *p1, *p2);
+void swap(float *num1, float *num2){
+	float temp;
+	temp = *num1;
+	*num1 = *num2;
+	*num2 = temp;
 }
 
 void main(){
@@ -20,7 +17,8 @@ void main(){
 	printf("b=");
 	scanf("%f", &b);
 	printf("After a and b exchange values: ");
-	swap(a, b);
+	swap(&a, &b);
+	printf("a=%f, b=%f\n", a, b);
 
   system("pause");
 }
