@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<Windows.h>
 
 #define BiTSize 50
 
@@ -42,4 +43,5 @@ void main(){
 	printf("The preorder is: ");
 	PreOrder(BT,0);
 	printf("\n");
+	system("pause");
 }
