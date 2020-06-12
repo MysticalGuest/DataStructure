@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<Windows.h>
 
 int num=1;
 
@@ -53,4 +54,5 @@ void main(){
 	BiTree BT;
 	ScanfBiTree(&BT);
 	PrintTree(BT,1);
+	system("pause");
 }
