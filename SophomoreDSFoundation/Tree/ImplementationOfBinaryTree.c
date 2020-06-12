@@ -179,9 +179,9 @@ int compare(BSTree bst,char cond[]){
 
 void FindBooks(BSTree bstOfName,BSTree bstOfAuthor,BSTree bstOfPrice){
 	BSTree p;
-	int i,num,numOfBook=0,pri;
-	double price=0,point=1;
-	char cond1[NAMELEN],cond2[NAMELEN],ch='Y';
+	int i, num, numOfBook=0, pri;
+	double price=0, point=1;
+	char cond1[NAMELEN], cond2[NAMELEN], ch='Y';
 	printf("Input one or more conditions of a book you want to find.\n\n");
 	printf("Warning!!!:\n(1)The condions respectively are title,author and price!\n(2)The name of book needs symbol '<<>>'!\n");
 	while(ch=='Y'){
