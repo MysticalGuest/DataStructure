@@ -24,7 +24,7 @@ void printRecursively(char *number, int n, int index){
 	}
 	for(i = 0; i<10; i++){
 		number[index] = i + '0';
-		printf("NUMBER: %s\n", number);
+		// printf("NUMBER: %s\n", number);
 		printRecursively(number, n, index + 1);
 	}
 }
