@@ -31,12 +31,12 @@
 
 // 定义运算符栈
 typedef struct{
-	char elem[StackSize];
-	int top;
+  char elem[StackSize];
+  int top;
 }SeqCStack;
 
 void InitCStack(SeqCStack *S){
-	S->top=-1;
+  S->top=-1;
 }
 
 void pushCStack(SeqCStack *S, char operator){
@@ -80,12 +80,12 @@ void traverse(SeqCStack S){
 
 // 定义运算数栈
 typedef struct{
-	int data[StackSize];
-	int top;
+  int data[StackSize];
+  int top;
 }SeqNStack;
 
 void InitNStack(SeqNStack *S){
-	S->top=-1;
+  S->top=-1;
 }
 
 void pushNStack(SeqNStack *S, int num){
@@ -155,35 +155,35 @@ char compare(char operator, char top){
 }
 
 int caculate(int left, int right, char c){
-	int re = 0;
-	switch (c){
-	case '+':
-		re = left + right;
-		break;
-	case '-':
-		re = left - right;
-		break;
-	case '*':
-		re = left * right;
-		break;
-	case '/':
-		re = left / right;
-		break;
-	default:
-		break;	
-	}
-	return re;
+  int re = 0;
+  switch (c){
+  case '+':
+    re = left + right;
+    break;
+  case '-':
+    re = left - right;
+    break;
+  case '*':
+    re = left * right;
+    break;
+  case '/':
+    re = left / right;
+    break;
+  default:
+    break;
+  }
+  return re;
 }
 
 void main(){
   SeqCStack OS, SuffixExp;
   SeqNStack NS;
   /* 初始化运算符栈 */
-	InitCStack(&OS);
+  InitCStack(&OS);
   /* 初始化运算数栈 */
-	InitNStack(&NS);
+  InitNStack(&NS);
   /* 初始后缀表达式栈 */
-	InitCStack(&SuffixExp);
+  InitCStack(&SuffixExp);
 
   char exp[] = {'5', '+', '2', '*', '(', '1', '+', '6', ')', '-', '8', '/', '2', '\0'};
   printf("Infix expression is: %s\n", exp);
@@ -192,29 +192,29 @@ void main(){
   while (exp[i]!='\0'){
     if(isdigit(exp[i])){    // 如果是数字直接进后缀表达式栈
       pushCStack(&SuffixExp, exp[i]);
-      printf("num------%c\n", exp[i]);
+      // printf("num------%c\n", exp[i]);
       i++;
     }
     else{
-      printf("char------\n");
-      printf("compare----%c\n", compare(exp[i], getCStackTop(OS)));
+      // printf("char------\n");
+      // printf("compare----%c\n", compare(exp[i], getCStackTop(OS)));
       switch(compare(exp[i], getCStackTop(OS))){
         case '>': 
           pushCStack(&OS, exp[i]);
-          printf("case1 >---%c\n", exp[i]);
+          // printf("case1 >---%c\n", exp[i]);
           i++;
           break;
         case '=': 
           popCStack(&OS, &temp);   // 脱括号
-          printf("case2 =---%c\n", temp);
+          // printf("case2 =---%c\n", temp);
           i++;
           break;
         case '<':
           while(compare(exp[i], getCStackTop(OS))=='<'){
-            printf("case3 <---%c\n", exp[i]);
-            printf("case3 getCStackTop %c\n", getCStackTop(OS));
+            // printf("case3 <---%c\n", exp[i]);
+            // printf("case3 getCStackTop %c\n", getCStackTop(OS));
             popCStack(&OS, &temp);
-            printf("case3 after getCStackTop %c\n", getCStackTop(OS));
+            // printf("case3 after getCStackTop %c\n", getCStackTop(OS));
             pushCStack(&SuffixExp, temp);
           }
           // if(exp[i]!=')'){i++;}
@@ -240,27 +240,26 @@ void main(){
     如果遇到运算符，那么弹出栈里面两个元素，先弹出的是右运算数，后弹出的是左运算数，计算运算结果，然后将结果入栈。
     最后遍历到后缀表达式末尾，当结果只有一个元素时，就是答案
   */
- char *p=suffixstr;
- while (*p != '\0'){
-		if (isdigit(*p)){
-			pushNStack(&NS, *p-'0');
-		}
-		else
-		{
-			popNStack(&NS, &tempNum);
-			int rightNum = tempNum;
-      printf("rightNum:::%d\n", rightNum);
-			// free(temp);
-			popNStack(&NS, &tempNum);
-			int leftNum = tempNum;
-			// free(temp);
-            
-			int result = caculate(leftNum, rightNum, *p);
-      printf("caculate result----%d\n", result);
-			pushNStack(&NS, result);
-		}
-		p++;
-	}
+  char *p=suffixstr;
+  while (*p != '\0'){
+    if (isdigit(*p)){
+      pushNStack(&NS, *p-'0');
+    }
+    else{
+      popNStack(&NS, &tempNum);
+      int rightNum = tempNum;
+      // printf("rightNum:::%d\n", rightNum);
+      // free(temp);
+      popNStack(&NS, &tempNum);
+      int leftNum = tempNum;
+      // free(temp);
+      
+      int result = caculate(leftNum, rightNum, *p);
+      // printf("caculate result----%d\n", result);
+      pushNStack(&NS, result);
+    }
+    p++;
+  }
   printf("result: %d\n", getNStackTop(NS));
 
   system("pause");
