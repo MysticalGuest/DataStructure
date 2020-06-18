@@ -100,6 +100,6 @@ void main(){
     printf("The element you entered is not in the binary tree!\n");
   else
     printf("The layer number of the node with value %c in the binary tree is: %d\n", x, lay);
-  printf("The layer number of the node with value %c in the binary tree is: %d\n", x, layer(T, x));
+  // printf("The layer number of the node with value %c in the binary tree is: %d\n", x, layer(T, x));
   system("pause");
 }
