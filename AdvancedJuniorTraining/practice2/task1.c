@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<Windows.h>
- 
+
 void print(char *number, int n){
   int i = 0;
   for(i; i<n; i++){
@@ -15,7 +15,7 @@ void print(char *number, int n){
     printf("%c", number[i]);
   printf(" ");
 }
- 
+
 void printRecursively(char *number, int n, int index){
   int i;
 	if(index == n){
@@ -28,7 +28,7 @@ void printRecursively(char *number, int n, int index){
 		printRecursively(number, n, index + 1);
 	}
 }
- 
+
 void printToMaxOfNDigits(int n){
 	if (n <= 0)
 		return;
@@ -39,7 +39,7 @@ void printToMaxOfNDigits(int n){
   
   free(number);
 }
- 
+
 void main(){
 	int n;
   // 输入数字n,按顺序打印输出从1到最大的n位十进制数
