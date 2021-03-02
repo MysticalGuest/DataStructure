@@ -9,3 +9,8 @@
 #*.ntvs*
 #*.njsproj
 #*.sln
+
+bin
+obj
+*.cbp
+*.depend
