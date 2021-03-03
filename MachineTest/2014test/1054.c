@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define SIZE 1000
+#define SIZE 100
 
 int string_statistics()
 {
