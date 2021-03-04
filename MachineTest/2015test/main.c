@@ -6,6 +6,7 @@ int decimal_to_binary();
 int maze();
 int another_maze();
 int string_replace();
+int six_digits();
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
     //decimal_to_binary();
     //maze();
     //another_maze();
-    string_replace();
+    //string_replace();
+    six_digits();
     return 0;
 }
