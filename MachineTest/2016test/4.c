@@ -17,7 +17,7 @@ typedef struct{
 float compute(char exp[]){
     char num[10]; // 提取数字
     NStack ns;
-    ns.top=-1
+    ns.top=-1;
     CStack cs;
     cs.top=-1;
     int flag=0; // 没有出现小数点
@@ -27,7 +27,7 @@ float compute(char exp[]){
         }
         if(exp[i+1]!='\0'){ // 处理小数和多位数
             while(exp[i+1]!='+'&&exp[i+1]!='-'&&exp[i+1]!='*'&&exp[i+1]!='/'){ //多位数或小数
-                if(exp[])
+                //if(exp[])
             }
         }
     }
