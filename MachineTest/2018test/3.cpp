@@ -5,7 +5,6 @@ using namespace std;
 #define Size 100
 
 long int C(int n, int m){
-    // ¹«Ê½
     long int molecule=1, denominator=1;
     int p=n, q=m;
     for(int i=0; i<m; i++){
